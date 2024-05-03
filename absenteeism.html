@@ -15,28 +15,30 @@
 </head>
 
 <body>
-    <div class="container table-container">
-        <table class="table text-center">
-            <thead>
-                <tr>
-                    <th scope="col" rowspan="2">#</th>
-                    <th scope="col" rowspan="2">Nama Siswa</th>
-                    <th colspan="31">Tanggal</th>
-                    <!-- Days will be added dynamically using JavaScript -->
-                </tr>
-                <tr>
-                    <!-- Populate the date headers -->
-                    <script>
-                        for (let i = 1; i <= 31; i++) {
-                            document.write(`<th>${i}</th>`);
-                        }
-                    </script>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Rows will be added dynamically using JavaScript -->
-            </tbody>
-        </table>
+    <div class="conteiner">
+        <div class="container table-container">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col" rowspan="2">#</th>
+                        <th scope="col" rowspan="2">Nama Siswa</th>
+                        <th colspan="31">Tanggal</th>
+                        <!-- Days will be added dynamically using JavaScript -->
+                    </tr>
+                    <tr>
+                        <!-- Populate the date headers -->
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write(`<th>${i}</th>`);
+                            }
+                        </script>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
