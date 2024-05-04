@@ -1,0 +1,145 @@
+body {
+  background-color: #333; /* Warna abu-abu gelap */
+  /* Atau Anda bisa menggunakan warna biru tua */
+  /* background-color: #0A0E3F; */
+}
+
+.floating-button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.floating-items {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  visibility: hidden; /* Mulai dengan menyembunyikan floating items */
+  opacity: 0; /* Mulai dengan opacity 0 */
+  transition: visibility 1s, opacity 2s ease, transform 2s ease; /* Transisi lebih lambat */
+  transform: translate(-50%, -50%) scale(0.5) rotate(0deg); /* Mulai dengan ukuran setengah dan rotasi 0 derajat */
+}
+
+.floating-items.active {
+  visibility: visible; /* Tampilkan floating items saat tombol utama diklik */
+  opacity: 1; /* Ubah opacity menjadi 1 saat tampil */
+  transform: translate(-50%, -50%) scale(1) rotate(360deg); /* Tampilkan dengan ukuran penuh dan rotasi 360 derajat */
+}
+
+.floating-items li {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+}
+
+.floating-items button {
+  z-index: 1;
+}
+.btn-instagram {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #405de6; /* Warna latar belakang Instagram */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-instagram:hover {
+  background-color: #3949ab; /* Warna latar belakang Instagram saat hover */
+  color: #fff;
+}
+.btn-facebook {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1877f2; /* Warna latar belakang Facebook */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transisi saat hover */
+}
+
+.btn-facebook:hover {
+  background-color: #3b5998; /* Warna latar belakang Facebook saat hover */
+  color: #fff; /* Warna teks putih saat hover */
+}
+.btn-twitter {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1da1f2; /* Warna latar belakang Twitter */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transisi saat hover */
+}
+
+.btn-twitter:hover {
+  background-color: #00acee; /* Warna latar belakang Twitter saat hover */
+  color: #fff; /* Warna teks putih saat hover */
+}
+.btn-reddit {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff4500; /* Warna latar belakang Reddit */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transisi saat hover */
+}
+
+.btn-reddit:hover {
+  background-color: #ff5700; /* Warna latar belakang Reddit saat hover */
+  color: #fff; /* Warna teks putih saat hover */
+}
+.btn-whatsapp {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #25d366; /* Warna latar belakang WhatsApp */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transisi saat hover */
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e; /* Warna latar belakang WhatsApp saat hover */
+  color: #fff; /* Warna teks putih saat hover */
+}
+.btn-github {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #28a745; /* Warna latar belakang GitHub */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transisi saat hover */
+}
+
+.btn-github:hover {
+  background-color: #218838; /* Warna latar belakang GitHub saat hover */
+  color: #fff; /* Warna teks putih saat hover */
+}
