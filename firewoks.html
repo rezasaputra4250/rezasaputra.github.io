@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireworks Animation</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Menghilangkan scroll */
+        }
+
+        canvas {
+            display: block;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Mendapatkan lebar dan tinggi layar
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const fireworks = [];
+
+        // Fungsi untuk membuat titik api
+        function createFirework() {
+            const x = Math.random() * canvas.width;
+            const y = canvas.height;
+            const speed = 2 + Math.random() * 3; // Kecepatan naik
+            const color = `hsl(${Math.random() * 360}, 100%, 50%)`; // Warna acak
+
+            fireworks.push({ x, y, speed, color });
+        }
+
+        // Fungsi untuk menggambar titik api
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < fireworks.length; i++) {
+                const firework = fireworks[i];
+                ctx.beginPath();
+                ctx.fillStyle = firework.color;
+                ctx.arc(firework.x, firework.y, 5, 0, Math.PI * 2);
+                ctx.fill();
+                firework.y -= firework.speed;
+
+                // Menghapus titik api ketika mencapai atas layar
+                if (firework.y < 0) {
+                    fireworks.splice(i, 1);
+                }
+            }
+        }
+
+        // Fungsi untuk mengatur animasi dengan permintaan frame
+        function animate() {
+            requestAnimationFrame(animate);
+            draw();
+
+            // Membuat titik api secara periodik
+            if (Math.random() < 0.03) {
+                createFirework();
+            }
+        }
+
+        // Panggil fungsi untuk mulai animasi
+        animate();
+
+    </script>
+</body>
+
+</html>
