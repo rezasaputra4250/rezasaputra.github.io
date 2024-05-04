@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol Segi Enam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Custom styles for the hexagon button */
+        .hexagon {
+            font-size: 14px;
+            position: relative;
+            border-radius: 10px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            margin: 35px 0;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .hexagon i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center mt-5">
+        <button class="hexagon btn btn-primary">
+            <i class="fas fa-star fa-2x"></i>
+        </button>
+        <div class="hexagon btn btn-secondary">
+            <i class="fas fa-heart fa-2x"></i>
+        </div>
+        <div class="hexagon btn btn-success">
+            <i class="fas fa-check fa-2x"></i>
+        </div>
+        <div class="hexagon btn btn-danger">
+            <i class="fas fa-times fa-2x"></i>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+
+</html>
